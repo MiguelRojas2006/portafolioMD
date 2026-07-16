@@ -1,4 +1,4 @@
-# Estructuras de Datos No Lineales: Grafos y Árboles
+#  Lógica
 
 <details>
 <summary><strong> 📖 Introducción </strong></summary>
@@ -21,246 +21,227 @@ Además, se describen sus definiciones, propiedades y principales clasificacione
 ---
 
 <details>
-<summary><strong> 🕸️ Definición y Tipología de Grafos </strong></summary>
+<summary><strong>  Definición y Clasificacion de una Proposición </strong></summary>
 
-## ¿Qué es un grafo?
+## ¿Qué es una Proposición?
 
-Un grafo es una estructura matemática y de datos que se utiliza para representar relaciones entre elementos. 
+En lógica matemática, una **proposición** es una oración declarativa (un enunciado) de la cual se puede afirmar, de manera inequívoca, si es **verdadera (V)** o **falsa (F)**, pero nunca ambas cosas a la vez. El valor de verdad de una proposición no depende de interpretaciones o dudas.
 
-**Está compuesto por dos partes fundamentales:**
-
-- Vértices (o Nodos): Los objetos o puntos del sistema.
-
-- Aristas (o Arcos): Las líneas o conexiones que unen a esos puntos.
-
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/5d2c7db6-a6f3-44c5-b670-ee73747f755f" />
-
-Donde:
-
-| Símbolo | Descripción |
-|---------|-------------|
-| **V** | Conjunto no vacío de vértices o nodos que representan objetos o entidades. |
-| **E** | Conjunto de aristas o conexiones que relacionan los vértices. |
+### Ejemplos Claros:
+* **Es proposición:** *"Hoy es lunes"* (puede ser verdadero o falso).
+* **Es proposición:** *"El número 10 es par"* (es verdadero).
+* **NO es proposición:** *"¡Qué calor hace!"* (es una exclamación, no afirma nada con un valor de verdad).
+* **NO es proposición:** *"¿Cómo te llamas?"* (es una pregunta).
 
 ---
+
+## Clasificación de las Proposiciones
+
+Las proposiciones se dividen en dos tipos según su estructura:
+
+* **Proposiciones Simples (Atómicas):** Son aquellas que expresan una sola idea de forma directa y no contienen conectores lógicos. 
+  * *Ejemplo:* "La Tierra es un planeta." (Se representa típicamente con variables como $p$, $q$, $r$).
+* **Proposiciones Compuestas (Moleculares):** Son aquellas que se forman al unir dos o más proposiciones simples utilizando conectores lógicos (como "y", "o", "si... entonces"). Su valor de verdad depende de los valores de las proposiciones simples que la componen.
+  * *Ejemplo:* "La Tierra es un planeta **y** gira alrededor del Sol." (Representado simbólicamente como $p \wedge q$).
 
 </details>
 
 ---
 
 <details>
-<summary><strong> 📌 Clasificación de los Grafos </strong></summary>
+<summary><strong> 📌 Conectores Lógicos </strong></summary>
 
-Los grafos se pueden clasificar en:
+## Conectores Lógicos y Tablas de Verdad
 
-<details>
-<summary><strong> 📌 Grafos Dirigidos (Dígrafos) </strong></summary>
-  
-Las aristas tienen una dirección específica indicada por una flecha. La relación es unidireccional a menos que se indique lo contrario.
+Los **conectores lógicos** son operadores que nos permiten unir proposiciones simples para formar proposiciones compuestas. Su comportamiento matemático se define mediante las siguientes reglas:
 
-```text
-(A) ----> (B)
-```
+| Conector Lógico | Operación | Símbolo | Lectura Común | Regla de Oro (Valor de Verdad) |
+| :--- | :--- | :---: | :---: | :--- |
+| **Negación** | NOT | $\sim$ o $\neg$ | "No..." | Invierte el valor de verdad original (si es $V$ pasa a $F$, y viceversa). |
+| **Conjunción** | AND | $\wedge$ | "... y ..." | Solo es **Verdadero** si **ambas** proposiciones son verdaderas. |
+| **Disyunción Inclusiva** | OR | $\vee$ | "... o ..." | Solo es **Falso** si **ambas** proposiciones son falsas. |
+| **Condicional** | Implicación | $\rightarrow$ | "Si..., entonces..." | Solo es **Falso** cuando el antecedente es **Verdadero** y el consecuente es **Falso** ($V \rightarrow F$). |
+| **Bicondicional** | Equivalencia | $\leftrightarrow$ | "... si y solo si ..." | Es **Verdadero** únicamente cuando ambos lados tienen el **mismo** valor de verdad ($V \leftrightarrow V$ o $F \leftrightarrow F$). |
+| **Disyunción Exclusiva** | XOR | $\underline{\vee}$ o $\oplus$ | "O bien... o bien..." | Es **Verdadero** solo cuando los valores de verdad son **diferentes** ($V \oplus F$ o $F \oplus V$). |
 
-La relación únicamente es válida desde el nodo origen hacia el nodo destino.
-
-### Características de los Grafos Dirigidos
-
-* **Relaciones Unidireccionales:** 
-
-* **Grados de Entrada y Salida:** A diferencia de los grafos comunes, en los dirigidos el grado de cada nodo se divide en dos:
-  * *Grado de Entrada (In-degree):* 
-  * *Grado de Salida (Out-degree):* 
-
-* **Caminos Restringidos (Conectividad):** 
-
----
 
 </details>
 
 ---
 
 <details>
-<summary><strong> 📌 Grafos No Dirigidos </strong></summary>
-
-Las aristas no tienen un sentido o dirección definida. La relación es bidireccional por defecto. Si hay una conexión entre $A$ y $B$, se puede viajar en ambos sentidos.
+<summary><strong>  Tablas de Verdad </strong></summary>
 
 
-```text
-(A) <---> (B)
-```
+## Tablas de Verdad
 
-No existe una dirección definida entre los nodos.
+Una **tabla de verdad** es una representación gráfica y matemática que muestra todos los posibles escenarios de verdad para una proposición compuesta, analizando cada combinación de valores de sus variables de entrada.
 
-### Características de los Grafos No Dirigidos
+### ¿Cómo se construye una tabla de verdad?
 
-* **Relaciones Bidireccionales (Simetría):**
-
-* **Grado Único por Vértice:**
-  
-* **Matriz de Adyacencia Simétrica:** 
-
-Su simplicidad los convierte en una de las estructuras más utilizadas en programación.
+1. **Determinar el número de filas:** Se calcula con la fórmula $2^n$, donde $n$ es el número de proposiciones simples (variables).
+   * Con **2 variables** ($p, q$): $2^2 = 4$ filas.
+   * Con **3 variables** ($p, q, r$): $2^3 = 8$ filas.
+2. **Distribuir los valores:** En la primera columna se alternan las mitades (ej. para 4 filas: 2 verdaderas y 2 falsas); en la siguiente columna se reduce a la mitad (1 verdadera y 1 falsa), y así sucesivamente.
+3. **Resolver por jerarquía:** Se operan primero los paréntesis más internos, luego los corchetes y finalmente el operador principal de la expresión.
 
 ---
+
+## Clasificación de las Tablas de Verdad
+
+Una vez resuelta la tabla, el resultado obtenido en la columna del operador principal determina su tipo:
+
+* **Tautología:** Se presenta cuando **todos los resultados** de la última columna son **Verdaderos ($V$)**, sin importar los valores individuales de las variables de entrada. Representa una verdad lógica absoluta.
+* **Contradicción (Falsa):** Se presenta cuando **todos los resultados** de la última columna son **Falsos ($F$)**. Representa un absurdo o imposibilidad lógica.
+* **Contingencia:** Se presenta cuando en el resultado final hay una **mezcla de valores Verdaderos ($V$) y Falsos ($F$)**. Indica que el valor de verdad final depende directamente de las circunstancias de las variables de entrada.
+
+## Tabla de Verdad de Lógica Proposicional
+
+### 1. Negación
+| $p$ | $\sim p$ |
+| :---: | :---: |
+| V | F |
+| F | V |
+
+---
+
+### 2. Conjunción (Y)
+| $p$ | $q$ | $p \wedge q$ |
+| :---: | :---: | :---: |
+| V | V | **V** |
+| V | F | F |
+| F | V | F |
+| F | F | F |
+
+---
+
+### 3. Disyunción (O)
+| $p$ | $q$ | $p \vee q$ |
+| :---: | :---: | :---: |
+| V | V | V |
+| V | F | V |
+| F | V | V |
+| F | F | **F** |
+
+---
+
+### 4. Disyunción Exclusiva
+| $p$ | $q$ | $p \ \underline{\vee} \ q$ |
+| :---: | :---: | :---: |
+| V | V | F |
+| V | F | V |
+| F | V | V |
+| F | F | F |
+
+---
+
+### 5. Condicional
+| $p$ | $q$ | $p \rightarrow q$ |
+| :---: | :---: | :---: |
+| V | V | V |
+| V | F | **F** |
+| F | V | V |
+| F | F | V |
+
+---
+
+### 6. Bicondicional
+| $p$ | $q$ | $p \leftrightarrow q$ |
+| :---: | :---: | :---: |
+| V | V | **V** |
+| V | F | F |
+| F | V | F |
+| F | F | **V** |
 
 </details>
 
 ---
 
 <details>
-<summary><strong> 📌 Grafos Ponderados </strong></summary>
+<summary><strong> Principales Leyes Lógicas </strong></summary>
 
-Cada arista tiene un valor numérico asignado llamado peso o costo. Este número puede representar distancias, tiempo, consumo de ancho de banda, etc.
+Las **leyes lógicas** (o equivalencias notables) son reglas formales que nos permiten simplificar proposiciones compuestas complejas sin necesidad de construir una tabla de verdad completa. Son el equivalente directo a las leyes del álgebra común.
 
-</details>
-
----
-
-<details>
-<summary><strong> 📌 Grafos No Ponderados </strong></summary>
-
-Todas las aristas tienen el mismo valor o simplemente representan la existencia de una conexión (no hay costos asociados).
-
----
-
-</details>
-
----
-
-</details>
-
----
-
-</details>
-
-<details>
-<summary><strong> 🌲 Definición y Tipologia de Árboles </strong></summary>
-
----
-
-<details>
-<summary><strong> 🌲QUE ES </strong></summary>
-
-En matemáticas discretas y teoría de grafos, un árbol es un tipo especial de grafo que cumple con dos condiciones fundamentales:
-
-**Es conexo:** Todos los nodos están conectados por al menos un camino.
-
-**Es acíclico:** No contiene ciclos (es decir, no hay caminos cerrados que regresen al mismo nodo sin repetir aristas).
-
-**🌲 Regla de oro: Si un árbol tiene $n$ vértices (nodos), siempre tendrá exactamente $n - 1$ aristas (conexiones).**
-
-</details>
-
-<details>
-<summary><strong> 🌲 ESTRUCTURA </strong></summary>
-
-**Su estructura esta formada por:**
-
-- *Raíz (Root): El nodo superior*
-
-- *Padre (Parent): Un nodo que tiene conexiones hacia abajo*
-
-- *Hijo (Child): Un nodo conectado directamente con otro que está en un nivel superior.*
-
-- *Hoja (Leaf): Nodos terminales que no tienen hijos*
-
-- *Nodos Internos: Aquellos que tienen al menos un hijo*
-
-- *Altura: La longitud del camino más largo desde la raíz hasta una hoja.*
-
-</details>
-
-<details>
-<summary><strong> 🌲 TIPOS DE ARBOLES </strong></summary>
-
-<details>
-<summary><strong> 🌲 Árboles Generales (N-arios) </strong></summary>
-
-Cada nodo puede tener un número indefinido de hijos.
-
-Se utilizan para representar estructuras jerárquicas como:
-
-- Sistemas de archivos
-- Organigramas
-- Árboles genealógicos
-
----
-
-</details>
-
-<details>
-<summary><strong> 🌲 Árboles Binarios </strong></summary>
-
-Cada nodo puede tener como máximo **dos hijos**:
-
-- Subárbol izquierdo.
-- Subárbol derecho.
-
-Su simplicidad los convierte en una de las estructuras más utilizadas en programación.
-
----
-
-</details>
-
-<details>
-<summary><strong> 🌲 Árboles Binarios de Búsqueda (BST) </strong></summary>
-
-Son árboles binarios que mantienen una propiedad de ordenamiento.
-
-Para cualquier nodo:
-
-```text
-Izquierda < Nodo < Derecha
-```
-
-Gracias a esta característica permiten realizar búsquedas de forma eficiente.
-
----
-
-</details>
-
-<details>
-<summary><strong> 🌲 Árboles AVL </strong></summary>
-
-Los árboles AVL son árboles binarios de búsqueda **auto-balanceados**.
-
-Su principal característica consiste en mantener equilibrada la altura entre sus subárboles.
-
-La diferencia de alturas nunca puede ser mayor que:
-
-```text
-1
-```
-
-Esto garantiza un rendimiento eficiente en operaciones de:
-
-- Inserción
-- Eliminación
-- Búsqueda
-
----
-
-</details>
-
----
-
-</details>
-
----
+| Nombre de la Ley | Equivalencia en Conjunción ($\wedge$) | Equivalencia en Disyunción ($\vee$) |
+| :--- | :---: | :---: |
+| **Idempotencia** | $p \wedge p \equiv p$ | $p \vee p \equiv p$ |
+| **Conmutativa** | $p \wedge q \equiv q \wedge p$ | $p \vee q \equiv q \vee p$ |
+| **Asociativa** | $(p \wedge q) \wedge r \equiv p \wedge (q \wedge r)$ | $(p \vee q) \vee r \equiv p \vee (q \vee r)$ |
+| **Distributiva** | $p \wedge (q \vee r) \equiv (p \wedge q) \vee (p \wedge r)$ | $p \vee (q \wedge r) \equiv (p \vee q) \wedge (p \vee r)$ |
+| **Identidad** | $p \wedge V \equiv p \quad \text{y} \quad p \wedge F \equiv F$ | $p \vee F \equiv p \quad \text{y} \quad p \vee V \equiv V$ |
+| **Complemento** | $p \wedge \sim p \equiv F$ | $p \vee \sim p \equiv V$ |
+| **Doble Negación** | $\sim(\sim p) \equiv p$ | - |
+| **Leyes de De Morgan** | $\sim(p \wedge q) \equiv \sim p \vee \sim q$ | $\sim(p \vee q) \equiv \sim p \wedge \sim q$ |
+| **Absorción** | $p \wedge (p \vee q) \equiv p$ | $p \vee (p \wedge q) \equiv p$ |
+| **Condicional** | $p \rightarrow q \equiv \sim p \vee q$ | - |
 
 </details>
 
 ---
 
 <details>
-<summary><strong> 🎯 Objetivo del Portafolio </strong></summary>
+<summary><strong> Reglas de Inferencia Lógica </strong></summary>
 
-El análisis, diseño e implementación de las estructuras de datos no lineales constituye un pilar fundamental en la formación de futuros profesionales de la ingeniería.
+A continuación se presentan las reglas formales de inferencia utilizadas para las demostraciones lógicas:
 
-Los ejercicios y casos prácticos desarrollados en este portafolio tienen como finalidad demostrar la aplicación de los conceptos teóricos mediante la resolución de problemas reales, fortaleciendo la comprensión de algoritmos y promoviendo el diseño de sistemas de información eficientes y escalables.
+### 1. Modus Ponendo Ponens
+$$\frac{p \rightarrow q, \quad p}{\therefore q}$$
 
 ---
+
+### 2. Modus Tollendo Tollens
+$$\frac{p \rightarrow q, \quad \neg q}{\therefore \neg p}$$
+
+---
+
+### 3. Silogismo Hipotético
+$$\frac{p \rightarrow q, \quad q \rightarrow r}{\therefore p \rightarrow r}$$
+
+---
+
+### 4. Modus Tollendo Ponens
+$$\frac{p \vee q, \quad \neg p}{\therefore q}$$
+
+---
+
+### 5. Dilema Constructivo
+$$\frac{(p \rightarrow q) \wedge (r \rightarrow s), \quad p \vee r}{\therefore q \vee s}$$
+
+---
+
+### 6. Dilema Destructivo
+$$\frac{(p \rightarrow q) \wedge (r \rightarrow s), \quad \neg q \vee \neg s}{\therefore \neg p \vee \neg r}$$
+
+---
+
+### 7. Simplificación
+$$\frac{p \wedge q}{\therefore p}$$
+
+---
+
+### 8. Conjunción
+$$\frac{p, \quad q}{\therefore p \wedge q}$$
+
+---
+
+### 9. Adición
+$$\frac{p}{\therefore p \vee q}$$
+
+---
+
+### 10. Conmutación
+$$\frac{p \vee q}{\therefore q \vee p}$$
+
+---
+
+### 11. Ley de Absorción
+$$\frac{p \rightarrow q}{\therefore p \rightarrow (p \wedge q)}$$
+
+</details>
+
+</details>
+
+</details>
 
 </details>
 
@@ -291,15 +272,13 @@ https://drive.google.com/drive/u/1/folders/1HR13MeR_peho4W_L75XOIpiLsLLmDVXu
 ---
 
 <details>
-<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 1 </strong></summary>
+<summary><strong> Contrucción de tablas de verdad </strong></summary>
 
 **Descripción**
 
-Actividad desarrollada en conjunto bajo la orientación del docente.
-
 🔗 **Link de la carpeta**
 
-https://drive.google.com/drive/u/1/folders/1Try-_f5gqfEo6DHEY4VUZU3YDRXZQrM6
+https://drive.google.com/drive/folders/1Rzh7yVSuEeYruj5YoQ7DzJuXKswm0hlY?usp=drive_link
 
 ---
 
@@ -308,11 +287,9 @@ https://drive.google.com/drive/u/1/folders/1Try-_f5gqfEo6DHEY4VUZU3YDRXZQrM6
 ---
 
 <details>
-<summary><strong> 📘 Actividad Autónoma (AA) N.º 2 </strong></summary>
+<summary><strong> Identificacion de Tautologías </strong></summary>
 
 **Descripción**
-
-Actividad colaborativa correspondiente al segundo bloque de aprendizaje autónomo.
 
 🔗 **Acceder a la actividad**
 
