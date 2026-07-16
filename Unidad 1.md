@@ -1,111 +1,364 @@
-## CONTENIDOS
+# Estructuras de Datos No Lineales: Grafos y Árboles
 
 <details>
-<summary><strong> Estructuras Condicionales </strong></summary>
-Son estructuras de control que permiten bifurcar el flujo de ejecución de un programa dependiendo de si se cumple o no una determinada condición booleana.
+<summary><strong> 📖 Introducción </strong></summary>
 
-## Tipos de Estructuras Condicionales
-- **Condicional Simple (Si / If):** Evalúa una condición. Si es verdadera, ejecuta un bloque de código; si es falsa, no hace nada.
+El presente portafolio académico tiene como propósito consolidar y exponer los conocimientos adquiridos en el área de las **estructuras de datos**, elementos fundamentales para el diseño de algoritmos eficientes y la resolución de problemas complejos en el desarrollo de software.
 
-<img width="737" height="248" alt="image" src="https://github.com/user-attachments/assets/984e5e80-0e7e-4fb6-8ce8-c1e30ecbcfbc" />
+Dentro de este ámbito, el estudio de las **estructuras no lineales** cobra una relevancia crítica, ya que permiten modelar relaciones complejas que superan las limitaciones de las estructuras lineales convencionales, como arreglos, listas o pilas.
 
-- **Condicional Compuesta (Si-Sino / If-Else):** Evalúa una condición. Si es verdadera ejecuta un bloque de código, y si es falsa ejecuta un bloque alternativo.
+En este repositorio se presenta una fundamentación teórica de las dos estructuras no lineales más representativas de las Ciencias de la Computación:
 
-<img width="739" height="269" alt="image" src="https://github.com/user-attachments/assets/f9867b47-0322-4fb5-9ec2-207c6f5b063b" />
+- **Grafos**
+- **Árboles**
 
-- **Condicional Múltiple (Según / Switch-Case):** Compara una variable o expresión con múltiples valores posibles (casos) y ejecuta el bloque correspondiente al primer valor que coincida.
+Además, se describen sus definiciones, propiedades y principales clasificaciones, sirviendo como base para el desarrollo de ejercicios y aplicaciones prácticas.
 
-<img width="738" height="465" alt="image" src="https://github.com/user-attachments/assets/3950b557-5e38-4060-9c32-ee4ac20ab1a4" />
-</details>
-
-<details>
-<summary><strong> Bucles Repetitivos </strong></summary>
-
-# Estructuras Repetitivas (Bucles)
-Permiten ejecutar un bloque de código varias veces consecutivas mientras se cumpla una condición o un número determinado de ocasiones.
-
-## Tipos de Estructuras Repetitivas
-- **Mientras (While):** Evalúa la condición antes de entrar al bucle. Si la condición es falsa desde el inicio, el bloque de código nunca se ejecuta.
-
-  <img width="737" height="310" alt="image" src="https://github.com/user-attachments/assets/7ed77447-4e6c-4951-ad6b-902930e9d780" />
-
-- **Hacer-Mientras (Do-While):** Ejecuta el bloque de código al menos una vez y luego evalúa la condición al final del ciclo.
-
-  <img width="737" height="308" alt="image" src="https://github.com/user-attachments/assets/3217759a-aad3-44b3-b506-695811a762bc" />
-
-- Para (For): Se utiliza cuando se conoce de antemano la cantidad exacta de iteraciones que se van a realizar. Maneja de forma interna la inicialización, la condición y el incremento/decremento de un contador.
-
-  <img width="735" height="304" alt="image" src="https://github.com/user-attachments/assets/20f6b8f8-fd62-46fa-8696-a16f81f6d135" />
+---
 
 </details>
 
+---
+
 <details>
-<summary><strong> Ejemplo </strong></summary>
+<summary><strong> 🕸️ Definición y Tipología de Grafos </strong></summary>
 
-## **Planteamiento del problema**
+## ¿Qué es un grafo?
 
-- Desarrollar un programa que permita al usuario ingresar su saldo inicial y realizar 5 operaciones. En cada operación podrá retirar dinero. El programa deberá verificar si tiene saldo suficiente para realizar el retiro y actualizar el saldo disponible.
+Un grafo es una estructura matemática y de datos que se utiliza para representar relaciones entre elementos. 
+
+**Está compuesto por dos partes fundamentales:**
+
+- Vértices (o Nodos): Los objetos o puntos del sistema.
+
+- Aristas (o Arcos): Las líneas o conexiones que unen a esos puntos.
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/5d2c7db6-a6f3-44c5-b670-ee73747f755f" />
+
+Donde:
+
+| Símbolo | Descripción |
+|---------|-------------|
+| **V** | Conjunto no vacío de vértices o nodos que representan objetos o entidades. |
+| **E** | Conjunto de aristas o conexiones que relacionan los vértices. |
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 📌 Clasificación de los Grafos </strong></summary>
+
+Los grafos se pueden clasificar en:
+
+<details>
+<summary><strong> 📌 Grafos Dirigidos (Dígrafos) </strong></summary>
   
-**Análisis del problema**
-**Entradas:**
-- Saldo inicial.
-- Monto a retirar.
+Las aristas tienen una dirección específica indicada por una flecha. La relación es unidireccional a menos que se indique lo contrario.
 
-**Proceso:**
-- Repetir 5 veces:
-- Solicitar monto de retiro.
-- Verificar si el saldo es suficiente.
-- Si es suficiente, descontar el monto.
-- Si no, mostrar mensaje de fondos insuficientes.
+```text
+(A) ----> (B)
+```
 
-**Salidas:**
-- Resultado de cada operación.
-- Saldo final.
+La relación únicamente es válida desde el nodo origen hacia el nodo destino.
 
-## **Código**
-<img width="288" height="364" alt="image" src="https://github.com/user-attachments/assets/4106998d-4273-467a-b4c1-8bb089b29bb6" />
+### Características de los Grafos Dirigidos
 
-## **Diagrama**
-<img width="6437" height="2070" alt="Diagrama en blanco (2)" src="https://github.com/user-attachments/assets/a8544112-386e-44c0-9638-90d82cdff90c" />
+* **Relaciones Unidireccionales:** 
 
-## **Salida en terminal**
-<img width="712" height="343" alt="image" src="https://github.com/user-attachments/assets/92aa86f6-2a17-4ca4-af87-8310b6b5cd57" />
+* **Grados de Entrada y Salida:** A diferencia de los grafos comunes, en los dirigidos el grado de cada nodo se divide en dos:
+  * *Grado de Entrada (In-degree):* 
+  * *Grado de Salida (Out-degree):* 
 
-## **Pruebas de escritorio**
-| Operación | Retiro ($) | Saldo Antes ($) | Resultado            | Saldo Después ($) |
-| --------- | ---------- | --------------- | -------------------- | ----------------- |
-| 1         | 100        | 500             | Retiro exitoso       | 400               |
-| 2         | 50         | 400             | Retiro exitoso       | 350               |
-| 3         | 400        | 350             | Fondos insuficientes | 350               |
-| 4         | 100        | 350             | Retiro exitoso       | 250               |
-| 5         | 50         | 250             | Retiro exitoso       | 200               |
+* **Caminos Restringidos (Conectividad):** 
+
+---
 
 </details>
-<details>
-<summary><strong> Principales Dificultades</strong></summary>
 
-Una de las principales dificultades fue controlar correctamente el saldo disponible después de cada retiro, ya que era necesario actualizar el valor de la variable en cada iteración. También se presentó el reto de validar que el usuario no pudiera retirar una cantidad mayor al saldo existente, utilizando adecuadamente las estructuras condicionales dentro del ciclo repetitivo.
+---
+
+<details>
+<summary><strong> 📌 Grafos No Dirigidos </strong></summary>
+
+Las aristas no tienen un sentido o dirección definida. La relación es bidireccional por defecto. Si hay una conexión entre $A$ y $B$, se puede viajar en ambos sentidos.
+
+
+```text
+(A) <---> (B)
+```
+
+No existe una dirección definida entre los nodos.
+
+### Características de los Grafos No Dirigidos
+
+* **Relaciones Bidireccionales (Simetría):**
+
+* **Grado Único por Vértice:**
+  
+* **Matriz de Adyacencia Simétrica:** 
+
+Su simplicidad los convierte en una de las estructuras más utilizadas en programación.
+
+---
 
 </details>
+
+---
+
 <details>
-<summary><strong> Reflexión Crítica </strong></summary>
+<summary><strong> 📌 Grafos Ponderados </strong></summary>
 
-Este ejercicio permitió comprender la importancia de combinar estructuras repetitivas y condicionales para resolver situaciones reales. Además, ayudó a fortalecer el razonamiento lógico al verificar condiciones antes de ejecutar una acción, garantizando que las operaciones realizadas sean válidas y que el programa funcione de manera correcta y segura.
-</details>
-<details>
-<summary><strong> Bibliografía </strong></summary>
-[1] L. Joyanes Aguilar, Fundamentos de Programación: Algoritmos, Estructuras de Datos y Objetos, 4.ª ed. Madrid, España: McGraw-Hill, 2008.
+Cada arista tiene un valor numérico asignado llamado peso o costo. Este número puede representar distancias, tiempo, consumo de ancho de banda, etc.
 
-[2] H. M. Deitel y P. J. Deitel, C Cómo Programar, 8.ª ed. México: Pearson Educación, 2016.
-
-[3] B. W. Kernighan y D. M. Ritchie, El Lenguaje de Programación C, 2.ª ed. México: Pearson Educación, 2004.
-
-[4] J. Paredes Velasco, Algoritmos y Programación Estructurada, Madrid, España: RA-MA Editorial, 2014.
-
-[5] A. V. Aho, J. E. Hopcroft y J. D. Ullman, Fundamentos de Ciencias de la Computación. México: CECSA, 2000.
 </details>
 
+---
+
 <details>
-<summary><strong> Uso de IA </strong></summary>
-Para la elaboración de este portafolio se utilizó una herramienta de inteligencia artificial únicamente como apoyo para conocer la forma adecuada de desglosar y organizar los temas desarrollados. El análisis, desarrollo de actividades, ejercicios, conclusiones y otros contenidos fueron realizados por el estudiante.
+<summary><strong> 📌 Grafos No Ponderados </strong></summary>
+
+Todas las aristas tienen el mismo valor o simplemente representan la existencia de una conexión (no hay costos asociados).
+
+---
+
+</details>
+
+---
+
+</details>
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Definición y Tipologia de Árboles </strong></summary>
+
+---
+
+<details>
+<summary><strong> 🌲QUE ES </strong></summary>
+
+En matemáticas discretas y teoría de grafos, un árbol es un tipo especial de grafo que cumple con dos condiciones fundamentales:
+
+**Es conexo:** Todos los nodos están conectados por al menos un camino.
+
+**Es acíclico:** No contiene ciclos (es decir, no hay caminos cerrados que regresen al mismo nodo sin repetir aristas).
+
+**🌲 Regla de oro: Si un árbol tiene $n$ vértices (nodos), siempre tendrá exactamente $n - 1$ aristas (conexiones).**
+
+</details>
+
+<details>
+<summary><strong> 🌲 ESTRUCTURA </strong></summary>
+
+**Su estructura esta formada por:**
+
+- *Raíz (Root): El nodo superior*
+
+- *Padre (Parent): Un nodo que tiene conexiones hacia abajo*
+
+- *Hijo (Child): Un nodo conectado directamente con otro que está en un nivel superior.*
+
+- *Hoja (Leaf): Nodos terminales que no tienen hijos*
+
+- *Nodos Internos: Aquellos que tienen al menos un hijo*
+
+- *Altura: La longitud del camino más largo desde la raíz hasta una hoja.*
+
+</details>
+
+<details>
+<summary><strong> 🌲 TIPOS DE ARBOLES </strong></summary>
+
+<details>
+<summary><strong> 🌲 Árboles Generales (N-arios) </strong></summary>
+
+Cada nodo puede tener un número indefinido de hijos.
+
+Se utilizan para representar estructuras jerárquicas como:
+
+- Sistemas de archivos
+- Organigramas
+- Árboles genealógicos
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Árboles Binarios </strong></summary>
+
+Cada nodo puede tener como máximo **dos hijos**:
+
+- Subárbol izquierdo.
+- Subárbol derecho.
+
+Su simplicidad los convierte en una de las estructuras más utilizadas en programación.
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Árboles Binarios de Búsqueda (BST) </strong></summary>
+
+Son árboles binarios que mantienen una propiedad de ordenamiento.
+
+Para cualquier nodo:
+
+```text
+Izquierda < Nodo < Derecha
+```
+
+Gracias a esta característica permiten realizar búsquedas de forma eficiente.
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Árboles AVL </strong></summary>
+
+Los árboles AVL son árboles binarios de búsqueda **auto-balanceados**.
+
+Su principal característica consiste en mantener equilibrada la altura entre sus subárboles.
+
+La diferencia de alturas nunca puede ser mayor que:
+
+```text
+1
+```
+
+Esto garantiza un rendimiento eficiente en operaciones de:
+
+- Inserción
+- Eliminación
+- Búsqueda
+
+---
+
+</details>
+
+---
+
+</details>
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 🎯 Objetivo del Portafolio </strong></summary>
+
+El análisis, diseño e implementación de las estructuras de datos no lineales constituye un pilar fundamental en la formación de futuros profesionales de la ingeniería.
+
+Los ejercicios y casos prácticos desarrollados en este portafolio tienen como finalidad demostrar la aplicación de los conceptos teóricos mediante la resolución de problemas reales, fortaleciendo la comprensión de algoritmos y promoviendo el diseño de sistemas de información eficientes y escalables.
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 📂 Actividades del Curso </strong></summary>
+
+En esta sección se encuentran organizadas las actividades desarrolladas durante el curso. Cada apartado contiene un enlace al repositorio correspondiente en Google Drive, donde se almacenan los archivos elaborados en grupo.
+
+---
+
+<details>
+<summary><strong> 📘 Actividad Autónoma (AA) N.º 1 </strong></summary>
+
+**Descripción**
+
+Actividad desarrollada de forma colaborativa como parte del aprendizaje autónomo.
+
+🔗 **Link de la carpeta**
+
+https://drive.google.com/drive/u/1/folders/1HR13MeR_peho4W_L75XOIpiLsLLmDVXu
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 1 </strong></summary>
+
+**Descripción**
+
+Actividad desarrollada en conjunto bajo la orientación del docente.
+
+🔗 **Link de la carpeta**
+
+https://drive.google.com/drive/u/1/folders/1Try-_f5gqfEo6DHEY4VUZU3YDRXZQrM6
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 📘 Actividad Autónoma (AA) N.º 2 </strong></summary>
+
+**Descripción**
+
+Actividad colaborativa correspondiente al segundo bloque de aprendizaje autónomo.
+
+🔗 **Acceder a la actividad**
+
+https://drive.google.com/drive/folders/1VmWDFUbVpSeLzDz_xVSlO9FtZC6Z-k-G?usp=drive_link
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 2 </strong></summary>
+
+**Descripción**
+
+Actividad desarrollada con el acompañamiento del docente durante el segundo bloque.
+
+🔗 **Acceder a la actividad**
+
+https://drive.google.com/drive/folders/1VkU-psOXGXbvtGBmAJ3Sm0efdM32B3vA?usp=drive_link
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 🧩 Aprendizaje Practico Experimental (APE) – Fases 1 a 5 </strong></summary>
+
+**Descripción**
+
+Compilación de todas las fases correspondientes al Aprendizaje Basado en Problemas (ABP), desarrolladas de manera grupal.
+
+🔗 **Acceder a las actividades**
+
+https://drive.google.com/drive/folders/1sPb47IR0qm7r4bwuqffnLdfyjXs8n0_A?usp=drive_link
+
+</details>
+
+---
+
+> **Nota:** Todos los enlaces dirigen a carpetas de Google Drive donde se encuentran almacenados los documentos, informes y demás evidencias correspondientes a cada actividad académica.
+
+
+---
+
 </details>
