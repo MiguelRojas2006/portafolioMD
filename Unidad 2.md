@@ -274,24 +274,7 @@ En esta sección se encuentran organizadas las actividades desarrolladas durante
 ---
 
 <details>
-<summary><strong> 📘 Actividad Autónoma (AA) N.º 1 </strong></summary>
-
-**Descripción**
-
-Actividad desarrollada de forma colaborativa como parte del aprendizaje autónomo.
-
-🔗 **Link de la carpeta**
-
-https://drive.google.com/drive/u/1/folders/1HR13MeR_peho4W_L75XOIpiLsLLmDVXu
-
----
-
-</details>
-
----
-
-<details>
-<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 1 </strong></summary>
+<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) </strong></summary>
 
 **Descripción**
 
@@ -308,7 +291,7 @@ https://drive.google.com/drive/u/1/folders/1Try-_f5gqfEo6DHEY4VUZU3YDRXZQrM6
 ---
 
 <details>
-<summary><strong> 📘 Actividad Autónoma (AA) N.º 2 </strong></summary>
+<summary><strong> 📘 Actividad Autónoma (AA) </strong></summary>
 
 **Descripción**
 
@@ -316,7 +299,7 @@ Actividad colaborativa correspondiente al segundo bloque de aprendizaje autónom
 
 🔗 **Acceder a la actividad**
 
-https://drive.google.com/drive/folders/1VmWDFUbVpSeLzDz_xVSlO9FtZC6Z-k-G?usp=drive_link
+https://drive.google.com/drive/folders/1FTKjoga1fPar5jPmI7mvtN4jazDNtx-W?usp=sharing
 
 ---
 
@@ -333,7 +316,7 @@ Actividad desarrollada con el acompañamiento del docente durante el segundo blo
 
 🔗 **Acceder a la actividad**
 
-https://drive.google.com/drive/folders/1VkU-psOXGXbvtGBmAJ3Sm0efdM32B3vA?usp=drive_link
+https://drive.google.com/drive/folders/1fLHPF5p1fxefQmgxoGBqdapgsUiNuZpj?usp=drive_link
 
 ---
 
@@ -342,22 +325,39 @@ https://drive.google.com/drive/folders/1VkU-psOXGXbvtGBmAJ3Sm0efdM32B3vA?usp=dri
 ---
 
 <details>
-<summary><strong> 🧩 Aprendizaje Practico Experimental (APE) – Fases 1 a 5 </strong></summary>
+<summary><strong> 🧩 Aprendizaje Practico Experimental (APE) – Fases 1 a 6 </strong></summary>
 
 **Descripción**
 
-Compilación de todas las fases correspondientes al Aprendizaje Basado en Problemas (ABP), desarrolladas de manera grupal.
+Compilación de las actividades correspondientes al Aprendizaje Práctico Experimental (APE), desarrolladas de forma grupal durante las diferentes fases de la asignatura.
 
-🔗 **Acceder a las actividades**
+### 📌 Fases 1 – 2
 
-https://drive.google.com/drive/folders/1sPb47IR0qm7r4bwuqffnLdfyjXs8n0_A?usp=drive_link
+🔗 **Acceder a la actividad**
 
-</details>
+[📁 Abrir carpeta en Google Drive]
+
+https://drive.google.com/drive/folders/1mo1deKAtf1gYF3m7195UPDQRrAuqDyCK?usp=drive_link
 
 ---
 
-> **Nota:** Todos los enlaces dirigen a carpetas de Google Drive donde se encuentran almacenados los documentos, informes y demás evidencias correspondientes a cada actividad académica.
+### 📌 Fases 3 – 4
 
+🔗 **Acceder a la actividad**
+
+[📁 Abrir carpeta en Google Drive]
+
+https://drive.google.com/drive/folders/15trE6Bz8hx1lusW1h4yWRauZUDlWxXiM?usp=drive_link
+
+---
+
+### 📌 Fases 5 – 6
+
+🔗 **Acceder a la actividad**
+
+[📁 Abrir carpeta en Google Drive]:
+
+https://drive.google.com/drive/folders/1t2UE3WtD2waEuCsTohqOyTD2nAUAjpmT?usp=drive_link
 
 ---
 
