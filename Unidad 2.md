@@ -1,4 +1,4 @@
-# Estructuras de Datos No Lineales: Grafos y Árboles
+# Métodos de Simplificación de Expresiones Lógicas
 
 <details>
 <summary><strong> 📖 Introducción </strong></summary>
@@ -125,6 +125,28 @@ Los mapas de Karnaugh se clasifican principalmente según el **número de variab
 * **Mapa de 5 Variables:** 
   * Consta de **32 celdas** ($2^5$).
   * Se suele trabajar de forma tridimensional, utilizando dos mapas contiguos de 16 celdas superpuestos lógicamente para analizar la adyacencia espacial.
+
+</details>
+
+
+</details>
+
+---
+
+<details>
+<summary><strong> ⚙️ Tabla Comparativa: Álgebra Booleana vs. Mapas de Karnaugh </strong></summary>
+
+| Criterio | Álgebra Booleana | Mapas de Karnaugh (K-Maps) |
+| :--- | :--- | :--- |
+| **Enfoque** | Método puramente analítico y matemático. | Método gráfico, visual y sistemático. |
+| **Complejidad de Uso** | Requiere memorizar y aplicar correctamente muchas leyes lógicas. | Requiere seguir un conjunto de reglas visuales de agrupación de celdas. |
+| **Facilidad de Error** | Alta. Es fácil equivocarse en un paso algebraico o no ver una simplificación posible. | Baja. Al ser un método visual y estructurado, la posibilidad de error es mínima. |
+| **Número de Variables** | No tiene un límite teórico (funciona con cualquier número de variables). | Ideal para $2$, $3$ o $4$ variables. Con $5$ o más variables se vuelve muy complejo de visualizar. |
+| **Resultado obtenido** | No siempre garantiza llegar a la forma más simplificada si se pasa por alto alguna ley. | Siempre garantiza obtener la expresión más simplificada posible (Suma de Productos mínima). |
+| **Tiempo de Resolución** | Puede ser lento y tedioso para funciones muy largas. | Muy rápido y mecánico una vez que se domina la técnica de agrupación. |
+
+
+</details>
 
 </details>
 
