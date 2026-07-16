@@ -1,6 +1,7 @@
 # Estructuras de Datos No Lineales: Grafos y Árboles
 
-## 📖 Introducción
+<details>
+<summary><strong> 📖 Introducción </strong></summary>
 
 El presente portafolio académico tiene como propósito consolidar y exponer los conocimientos adquiridos en el área de las **estructuras de datos**, elementos fundamentales para el diseño de algoritmos eficientes y la resolución de problemas complejos en el desarrollo de software.
 
@@ -15,18 +16,24 @@ Además, se describen sus definiciones, propiedades y principales clasificacione
 
 ---
 
-# 🕸️ 1. Definición y Tipología de Grafos
+</details>
+
+---
+
+<details>
+<summary><strong> 🕸️ Definición y Tipología de Grafos </strong></summary>
 
 ## ¿Qué es un grafo?
 
-Un **grafo** es una estructura matemática abstracta que permite representar relaciones bidimensionales o de red entre un conjunto de elementos.
+Un grafo es una estructura matemática y de datos que se utiliza para representar relaciones entre elementos. 
 
-Formalmente se define como:
+**Está compuesto por dos partes fundamentales:**
 
-```text
-G = (V, E)
-```
-<img width="600" height="432" alt="image" src="https://github.com/user-attachments/assets/ac3927a8-958b-4b15-b31b-6b229791f6ec" />
+- Vértices (o Nodos): Los objetos o puntos del sistema.
+
+- Aristas (o Arcos): Las líneas o conexiones que unen a esos puntos.
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/5d2c7db6-a6f3-44c5-b670-ee73747f755f" />
 
 Donde:
 
@@ -37,48 +44,167 @@ Donde:
 
 ---
 
-## Clasificación de los Grafos
+</details>
 
-### 📌 Grafos Dirigidos (Dígrafos)
+---
 
-En este tipo de grafo las aristas poseen una dirección específica.
+<details>
+<summary><strong> 📌 Clasificación de los Grafos </strong></summary>
+
+Los grafos se pueden clasificar en:
+
+<details>
+<summary><strong> 📌 Grafos Dirigidos (Dígrafos) </strong></summary>
+  
+Las aristas tienen una dirección específica indicada por una flecha. La relación es unidireccional a menos que se indique lo contrario.
 
 ```text
-(u → v)
+(A) ----> (B)
 ```
 
 La relación únicamente es válida desde el nodo origen hacia el nodo destino.
 
-**Características**
+### Características de los Grafos Dirigidos
 
-- Existe un sentido de recorrido.
-- La relación es unidireccional.
-- Muy utilizados para representar flujos de información o dependencias.
-<img width="391" height="345" alt="image" src="https://github.com/user-attachments/assets/c1f92558-f627-4fdd-88b1-51d8cccbe4dd" />
+* **Relaciones Unidireccionales:** 
 
+* **Grados de Entrada y Salida:** A diferencia de los grafos comunes, en los dirigidos el grado de cada nodo se divide en dos:
+  * *Grado de Entrada (In-degree):* 
+  * *Grado de Salida (Out-degree):* 
+
+* **Caminos Restringidos (Conectividad):** 
 
 ---
 
-### 📌 Grafos No Dirigidos
+</details>
 
-Las conexiones son bidireccionales.
+---
+
+<details>
+<summary><strong> 📌 Grafos No Dirigidos </strong></summary>
+
+Las aristas no tienen un sentido o dirección definida. La relación es bidireccional por defecto. Si hay una conexión entre $A$ y $B$, se puede viajar en ambos sentidos.
+
 
 ```text
-{u, v}
+(A) <---> (B)
 ```
 
 No existe una dirección definida entre los nodos.
 
-**Características**
+### Características de los Grafos No Dirigidos
 
-- La relación es recíproca.
-- Si un nodo está conectado con otro, el recorrido puede realizarse en ambos sentidos.
+* **Relaciones Bidireccionales (Simetría):**
+
+* **Grado Único por Vértice:**
+  
+* **Matriz de Adyacencia Simétrica:** 
 
 Su simplicidad los convierte en una de las estructuras más utilizadas en programación.
 
 ---
 
-### 📌 Árboles Binarios de Búsqueda (BST)
+</details>
+
+---
+
+<details>
+<summary><strong> 📌 Grafos Ponderados </strong></summary>
+
+Cada arista tiene un valor numérico asignado llamado peso o costo. Este número puede representar distancias, tiempo, consumo de ancho de banda, etc.
+
+</details>
+
+---
+
+<details>
+<summary><strong> 📌 Grafos No Ponderados </strong></summary>
+
+Todas las aristas tienen el mismo valor o simplemente representan la existencia de una conexión (no hay costos asociados).
+
+---
+
+</details>
+
+---
+
+</details>
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Definición y Tipologia de Árboles </strong></summary>
+
+---
+
+<details>
+<summary><strong> 🌲QUE ES </strong></summary>
+
+En matemáticas discretas y teoría de grafos, un árbol es un tipo especial de grafo que cumple con dos condiciones fundamentales:
+
+**Es conexo:** Todos los nodos están conectados por al menos un camino.
+
+**Es acíclico:** No contiene ciclos (es decir, no hay caminos cerrados que regresen al mismo nodo sin repetir aristas).
+
+**🌲 Regla de oro: Si un árbol tiene $n$ vértices (nodos), siempre tendrá exactamente $n - 1$ aristas (conexiones).**
+
+</details>
+
+<details>
+<summary><strong> 🌲 ESTRUCTURA </strong></summary>
+
+**Su estructura esta formada por:**
+
+- *Raíz (Root): El nodo superior*
+
+- *Padre (Parent): Un nodo que tiene conexiones hacia abajo*
+
+- *Hijo (Child): Un nodo conectado directamente con otro que está en un nivel superior.*
+
+- *Hoja (Leaf): Nodos terminales que no tienen hijos*
+
+- *Nodos Internos: Aquellos que tienen al menos un hijo*
+
+- *Altura: La longitud del camino más largo desde la raíz hasta una hoja.*
+
+</details>
+
+<details>
+<summary><strong> 🌲 TIPOS DE ARBOLES </strong></summary>
+
+<details>
+<summary><strong> 🌲 Árboles Generales (N-arios) </strong></summary>
+
+Cada nodo puede tener un número indefinido de hijos.
+
+Se utilizan para representar estructuras jerárquicas como:
+
+- Sistemas de archivos
+- Organigramas
+- Árboles genealógicos
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Árboles Binarios </strong></summary>
+
+Cada nodo puede tener como máximo **dos hijos**:
+
+- Subárbol izquierdo.
+- Subárbol derecho.
+
+Su simplicidad los convierte en una de las estructuras más utilizadas en programación.
+
+---
+
+</details>
+
+<details>
+<summary><strong> 🌲 Árboles Binarios de Búsqueda (BST) </strong></summary>
 
 Son árboles binarios que mantienen una propiedad de ordenamiento.
 
@@ -92,7 +218,10 @@ Gracias a esta característica permiten realizar búsquedas de forma eficiente.
 
 ---
 
-### 📌 Árboles AVL
+</details>
+
+<details>
+<summary><strong> 🌲 Árboles AVL </strong></summary>
 
 Los árboles AVL son árboles binarios de búsqueda **auto-balanceados**.
 
@@ -112,7 +241,20 @@ Esto garantiza un rendimiento eficiente en operaciones de:
 
 ---
 
-# 🎯 Objetivo del Portafolio
+</details>
+
+---
+
+</details>
+
+---
+
+</details>
+
+---
+
+<details>
+<summary><strong> 🎯 Objetivo del Portafolio </strong></summary>
 
 El análisis, diseño e implementación de las estructuras de datos no lineales constituye un pilar fundamental en la formación de futuros profesionales de la ingeniería.
 
@@ -120,13 +262,19 @@ Los ejercicios y casos prácticos desarrollados en este portafolio tienen como f
 
 ---
 
-# 📂 Actividades del Curso
+</details>
+
+---
+
+<details>
+<summary><strong> 📂 Actividades del Curso </strong></summary>
 
 En esta sección se encuentran organizadas las actividades desarrolladas durante el curso. Cada apartado contiene un enlace al repositorio correspondiente en Google Drive, donde se almacenan los archivos elaborados en grupo.
 
 ---
 
-## 📘 Actividad Autónoma (AA) N.º 1
+<details>
+<summary><strong> 📘 Actividad Autónoma (AA) N.º 1 </strong></summary>
 
 **Descripción**
 
@@ -138,7 +286,12 @@ https://drive.google.com/drive/u/1/folders/1HR13MeR_peho4W_L75XOIpiLsLLmDVXu
 
 ---
 
-## 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 1
+</details>
+
+---
+
+<details>
+<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 1 </strong></summary>
 
 **Descripción**
 
@@ -150,7 +303,12 @@ https://drive.google.com/drive/u/1/folders/1Try-_f5gqfEo6DHEY4VUZU3YDRXZQrM6
 
 ---
 
-## 📘 Actividad Autónoma (AA) N.º 2
+</details>
+
+---
+
+<details>
+<summary><strong> 📘 Actividad Autónoma (AA) N.º 2 </strong></summary>
 
 **Descripción**
 
@@ -158,11 +316,16 @@ Actividad colaborativa correspondiente al segundo bloque de aprendizaje autónom
 
 🔗 **Acceder a la actividad**
 
-
+https://drive.google.com/drive/folders/1VmWDFUbVpSeLzDz_xVSlO9FtZC6Z-k-G?usp=drive_link
 
 ---
 
-## 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 2
+</details>
+
+---
+
+<details>
+<summary><strong> 👨‍🏫 Actividad en Contacto con el Docente (ACD) N.º 2 </strong></summary>
 
 **Descripción**
 
@@ -170,11 +333,16 @@ Actividad desarrollada con el acompañamiento del docente durante el segundo blo
 
 🔗 **Acceder a la actividad**
 
-
+https://drive.google.com/drive/folders/1VkU-psOXGXbvtGBmAJ3Sm0efdM32B3vA?usp=drive_link
 
 ---
 
-## 🧩 Aprendizaje Practico Experimental (APE) – Fases 1 a 5
+</details>
+
+---
+
+<details>
+<summary><strong> 🧩 Aprendizaje Practico Experimental (APE) – Fases 1 a 5 </strong></summary>
 
 **Descripción**
 
@@ -182,7 +350,9 @@ Compilación de todas las fases correspondientes al Aprendizaje Basado en Proble
 
 🔗 **Acceder a las actividades**
 
+https://drive.google.com/drive/folders/1sPb47IR0qm7r4bwuqffnLdfyjXs8n0_A?usp=drive_link
 
+</details>
 
 ---
 
@@ -190,3 +360,5 @@ Compilación de todas las fases correspondientes al Aprendizaje Basado en Proble
 
 
 ---
+
+</details>
