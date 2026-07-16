@@ -25,7 +25,7 @@
 
 ## Unidad 1
 
-[Ir a Unidad 1](Unidad 1.md)
+[Ir a Unidad 1](Unidad1.md)
 
 ## Unidad 2
 
@@ -33,13 +33,13 @@
 
 
 
-[Ir a Unidad 2](Unidad 2.md)
+[Ir a Unidad 2](Unidad2.md)
 
 ## Unidad 3
 
 
 
-[Ir a Unidad 3](Unidad 3.md)
+[Ir a Unidad 3](Unidad3.md)
 
 ## Conclusiones
 
