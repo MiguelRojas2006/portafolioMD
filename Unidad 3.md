@@ -152,6 +152,8 @@ En matemáticas discretas y teoría de grafos, un árbol es un tipo especial de 
 
 </details>
 
+---
+
 <details>
 <summary><strong> 🌲 ESTRUCTURA </strong></summary>
 
@@ -239,15 +241,9 @@ Esto garantiza un rendimiento eficiente en operaciones de:
 - Eliminación
 - Búsqueda
 
----
-
 </details>
 
----
-
 </details>
-
----
 
 </details>
 
@@ -259,8 +255,6 @@ Esto garantiza un rendimiento eficiente en operaciones de:
 El análisis, diseño e implementación de las estructuras de datos no lineales constituye un pilar fundamental en la formación de futuros profesionales de la ingeniería.
 
 Los ejercicios y casos prácticos desarrollados en este portafolio tienen como finalidad demostrar la aplicación de los conceptos teóricos mediante la resolución de problemas reales, fortaleciendo la comprensión de algoritmos y promoviendo el diseño de sistemas de información eficientes y escalables.
-
----
 
 </details>
 
@@ -284,7 +278,6 @@ Actividad desarrollada de forma colaborativa como parte del aprendizaje autónom
 
 https://drive.google.com/drive/u/1/folders/1HR13MeR_peho4W_L75XOIpiLsLLmDVXu
 
----
 
 </details>
 
@@ -301,7 +294,6 @@ Actividad desarrollada en conjunto bajo la orientación del docente.
 
 https://drive.google.com/drive/u/1/folders/1Try-_f5gqfEo6DHEY4VUZU3YDRXZQrM6
 
----
 
 </details>
 
@@ -318,7 +310,6 @@ Actividad colaborativa correspondiente al segundo bloque de aprendizaje autónom
 
 https://drive.google.com/drive/folders/1VmWDFUbVpSeLzDz_xVSlO9FtZC6Z-k-G?usp=drive_link
 
----
 
 </details>
 
@@ -335,7 +326,6 @@ Actividad desarrollada con el acompañamiento del docente durante el segundo blo
 
 https://drive.google.com/drive/folders/1VkU-psOXGXbvtGBmAJ3Sm0efdM32B3vA?usp=drive_link
 
----
 
 </details>
 
@@ -354,7 +344,6 @@ https://drive.google.com/drive/folders/1sPb47IR0qm7r4bwuqffnLdfyjXs8n0_A?usp=dri
 
 </details>
 
----
 
 > **Nota:** Todos los enlaces dirigen a carpetas de Google Drive donde se encuentran almacenados los documentos, informes y demás evidencias correspondientes a cada actividad académica.
 
